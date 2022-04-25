@@ -12,17 +12,17 @@
 
 * Packages: pandas, numpy, sklearn, matplotlib, seaborn
 
-## 3. Data Sources
+## 3. Data
 
 The dataset is from Kaggle: https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data
 
-## 5. Methodology
+## 4. Methodology
 
-* Dependent variable: 'SalePrice'
+* Dependent variable: SalePrice
 
-* Independent variables: 
+* Independent variables: # of bedrooms, bathrooms,  first floor square feet, type of dwelling involved in the sale, zoning classification of the sale, linear feet of street connected to property, lot size in square feet, etc (refer to the "data_description.txt").
 
-* Machine Learning Regression Models: Lasso, Decision Tree, Random Forest, k-NN, SVM.
+* Machine Learning Regression Models: Lasso, Decision Tree, Random Forest, k-NN, SVM, Gradient Boosting.
 
 * GridSearchCV to tune the hyperparameters.
 
