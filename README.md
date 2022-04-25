@@ -1,7 +1,8 @@
 # House Price Prediction
 
-## 1.
-Introduction
+* result table and important features
+
+## 1. Introduction
 
 * Forecasted the price of listing houses with 84.6% R Square score based on dataset with 1461 rows and 81 columns.
 * Conducted data cleansing, EDA (exploratory data analysis), and feature engineering.
@@ -37,23 +38,21 @@ The dataset is from Kaggle: https://www.kaggle.com/competitions/house-prices-adv
 
 ## 6. EDA
 
-### 6.1 Ouput Variables (MJN - 1, others - 0):
+### 6.1 Ouput Variables: Sale Price
 
-<img width="989" alt="stage 2 brand 4" src="https://user-images.githubusercontent.com/64850893/155889230-1b53cca2-0e6b-477d-b9ff-a6c5efaf9112.png">
+<img width="500" alt="sale price" src="https://user-images.githubusercontent.com/64850893/165130005-42b0fe17-7667-4202-85ad-315385afc98d.png">
 
-* Will oversample in the next session because of the imbalanced dataset.
+* The distribution is skewed to the right, we will conduct a log transformation as follows.
+
+<img width="500" alt="sale price log" src="https://user-images.githubusercontent.com/64850893/165130459-aee16a12-6597-4304-b6a2-bbb3aac6b268.png">
 
 ### 6.2 Input Variables:
 
-The below visualizations will follow a segment analysis 
+Year Between Built and Sold:
 
-Previous Brand (behavioral):
+<img width="500" alt="year_built" src="https://user-images.githubusercontent.com/64850893/165131402-02be9bcd-9bae-4d30-8b3e-04966c6c6bac.png">
 
-<img width="1115" alt="pre brand 3" src="https://user-images.githubusercontent.com/64850893/155889095-575b5a70-d3e2-4390-b735-14274bf40868.png">
-
-
-* In terms of 
-
+* The longer the time between the house was built and the sale date, the lower the sale price, which aligns with business logic.
 
 ## 7. Modelling
 
@@ -67,17 +66,14 @@ Previous Brand (behavioral):
 
 ### 8.2 Model Performance:
 
-<img width="1011" alt="model_sum" src="https://user-images.githubusercontent.com/64850893/155891672-6e74397d-6133-4c9e-966d-d56be9b4a38c.png">
 
 * Considering the prediction accuracy as well as the model simplicity, Logistic Regression in Case 2 would be the optimal model, since it is more straightforward to interpret, with relevantly high prediction accuracy.
 
 ### 8.3 Confusion Matrix (Logistic Regression): 
 
-<img width="470" alt="cm_git" src="https://user-images.githubusercontent.com/64850893/155891735-bcfcc378-3bc3-4f0b-9d32-8691ab1ed777.png">
+
 
 ### 8.4 Feature Importance (Logistic Regression): 
-
-<img width="921" alt="lr fea c2" src="https://user-images.githubusercontent.com/64850893/155887997-5a75e3d5-f43c-4752-b055-c1db284e5c3c.png">
 
 * Positive features – previous brand as MJN, negative features – previous brand as other brands.
 * If the previous brand is "Abbott Specialty", it plays a positive impact on current MJN Stage 2 brand choice.
