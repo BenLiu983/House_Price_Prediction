@@ -28,17 +28,10 @@ The dataset is from Kaggle: https://www.kaggle.com/competitions/house-prices-adv
 
 * GridSearchCV to tune the hyperparameters.
 
-## 5. Data Cleaning
 
-* Numerical Variables (temporal/time, discrete, continous) 
+## 5. EDA
 
-* Categorical Variables.
-
-* Missing Values: (encode with "missing", or replace with mean(numeric)/ mode(categorical))
-
-## 6. EDA
-
-### 6.1 Ouput Variables: Sale Price
+### 5.1 Ouput Variables: Sale Price
 
 <img width="500" alt="sale price" src="https://user-images.githubusercontent.com/64850893/165130005-42b0fe17-7667-4202-85ad-315385afc98d.png">
 
@@ -46,7 +39,7 @@ The dataset is from Kaggle: https://www.kaggle.com/competitions/house-prices-adv
 
 <img width="500" alt="sale price log" src="https://user-images.githubusercontent.com/64850893/165130459-aee16a12-6597-4304-b6a2-bbb3aac6b268.png">
 
-### 6.2 Input Variables:
+### 5.2 Input Variables:
 
 Year Between Built and Sold:
 
@@ -54,40 +47,55 @@ Year Between Built and Sold:
 
 * The longer the time between the house was built and the sale date, the lower the sale price, which aligns with business logic.
 
+Full Bathroom:
+
+<img width="500" alt="full bath" src="https://user-images.githubusercontent.com/64850893/165351011-d2cf79cf-3e5f-44d3-942b-590587c9c96e.png">
+
+* There is a positive relationship between the number of (full) bathrooms and the average sale price. 
+
+Overall Condition:
+
+<img width="500" alt="overall condition" src="https://user-images.githubusercontent.com/64850893/165350871-81df69cc-c95c-4503-bfc5-7a1fe76005dd.png">
+
+* The higher the overall condition, the greater the sale price.
+
+
+## 6 Feature Engineering
+
+* Missing Values: (encode with "missing", or replace with mean(numeric)/ mode(categorical))
+
+* Numerical Variables (temporal/time, discrete, continous). 
+
+* Categorical Variables (apply mappings, encoding).
+
 ## 7. Modelling
 
 ### 7.1 Procedure
 
+* Metric Setting (R square)
+* Feature Selection (using Lasso)
 * Train-test-split
 * Cross validation
-* Oversampling
-* Machine learning algorithms (Logistic Regression and Random Forest)
+* Machine learning algorithms (Lasso, Decision Tree, Random Forest, k-NN, SVM, Gradient Boosting)
 * GridSearchCV
 
-### 8.2 Model Performance:
+### 7.2 Model Performance:
 
+<img width="749" alt="model compa" src="https://user-images.githubusercontent.com/64850893/165354835-d50df04c-2df4-43ca-a618-5de7008ee29b.png">
 
-* Considering the prediction accuracy as well as the model simplicity, Logistic Regression in Case 2 would be the optimal model, since it is more straightforward to interpret, with relevantly high prediction accuracy.
+* In terms of the model prediction accuracy, SVR, Lasso, and Random Forest are outperforming other algorithms.
+* Considering the interpretabioity of the model, Lasso would be the optimal choice in this case.
 
-### 8.3 Confusion Matrix (Logistic Regression): 
+### 7.3 Feature Importance (Lasso): 
 
+<img width="1198" alt="fea imp" src="https://user-images.githubusercontent.com/64850893/165355037-ac919774-92dc-4f56-8822-a1a722da0fad.png">
 
-
-### 8.4 Feature Importance (Logistic Regression): 
-
-* Positive features – previous brand as MJN, negative features – previous brand as other brands.
-* If the previous brand is "Abbott Specialty", it plays a positive impact on current MJN Stage 2 brand choice.
-* Number of children is negatively influencing the MJN Stage 2 brand selection .
+* "GrLivArea" (Above grade/ground living area square feet), "OverallQual" (Rates the overall material and finish of the house), and "1stFlrSF" (First Floor square feet) are the most crucial features when it comes to predicting the sale price of a house.
 
 ## 9. Conclusion
 
-* Drive MFB members to become Stage 1 users, due to the fact that the previous brand is a primary indicator.
-* Maintain/boost the quantity/quality of email campaigns, since the email performance is an essential driver.
-* Conduct experimentation to market users with only 1 child, because this metric negatively impact the outcome.
 
 ## 10. Next Steps
- 
-* Modify the output and input variables to tailor other business use cases.
-* More experimentation in terms of variables and models.
+
 
 
