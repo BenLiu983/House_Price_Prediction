@@ -94,8 +94,11 @@ Overall Condition:
 
 ## 9. Conclusion
 
+* Considering evaluation metric (R Square) and model interpretability, Lasso is the optimal model
+* Ground living area square feet, overall quality and first floor square feet are the most critical prediction indicators.
 
 ## 10. Next Steps
 
-
+* Experiment other feature combination.
+* Implement different models. 
 
