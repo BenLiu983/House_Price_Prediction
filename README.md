@@ -1,6 +1,12 @@
 # House Price Prediction
 
-* result table and important features
+* Model Performance
+
+<img width="749" alt="model compa" src="https://user-images.githubusercontent.com/64850893/165354835-d50df04c-2df4-43ca-a618-5de7008ee29b.png">
+
+* Feature Importance
+
+<img width="1198" alt="fea imp" src="https://user-images.githubusercontent.com/64850893/165355037-ac919774-92dc-4f56-8822-a1a722da0fad.png">
 
 ## 1. Introduction
 
@@ -24,7 +30,7 @@ The dataset is from Kaggle: https://www.kaggle.com/competitions/house-prices-adv
 
 * Independent variables: # of bedrooms/bathrooms/kitchen, # of basement bedrooms/bathrooms/kitchen, first floor square feet, type of dwelling involved in the sale, zoning classification of the sale, linear feet of street connected to property, lot size in square feet, etc (refer to the "data_description.txt").
 
-* Machine Learning Regression Models: Lasso, Decision Tree, Random Forest, k-NN, SVM, Gradient Boosting.
+* Machine Learning regression models: Lasso, Decision Tree, Random Forest, k-NN, SVM, Gradient Boosting.
 
 * GridSearchCV to tune the hyperparameters.
 
@@ -62,18 +68,20 @@ Overall Condition:
 
 ## 6 Feature Engineering
 
-* Missing Values: (encode with "missing", or replace with mean(numeric)/ mode(categorical))
+* Missing values (encode with "missing", or replace with mean(numeric)/ mode(categorical)).
 
-* Numerical Variables (temporal/time, discrete, continous). 
+* Numerical variables (temporal/time, discrete, continous). 
 
-* Categorical Variables (apply mappings, encoding).
+* Categorical variables (apply mappings, encoding).
+
+* Refined version ("feature engineering with open source").
 
 ## 7. Modelling
 
 ### 7.1 Procedure
 
-* Metric Setting (R square)
-* Feature Selection (using Lasso)
+* Metric setting (R square)
+* Feature selection (using Lasso)
 * Train-test-split
 * Cross validation
 * Machine learning algorithms (Lasso, Decision Tree, Random Forest, k-NN, SVM, Gradient Boosting)
@@ -83,18 +91,18 @@ Overall Condition:
 
 <img width="749" alt="model compa" src="https://user-images.githubusercontent.com/64850893/165354835-d50df04c-2df4-43ca-a618-5de7008ee29b.png">
 
-* In terms of the model prediction accuracy, SVR, Lasso, and Random Forest are outperforming other algorithms.
-* Considering the interpretabioity of the model, Lasso would be the optimal choice in this case.
+* In terms of the model prediction accuracy, SVR, Lasso, and Random Forest outperform other algorithms.
+* Considering the interpretability of the model, Lasso would be the optimal choice in this case.
 
 ### 7.3 Feature Importance (Lasso): 
 
 <img width="1198" alt="fea imp" src="https://user-images.githubusercontent.com/64850893/165355037-ac919774-92dc-4f56-8822-a1a722da0fad.png">
 
-* "GrLivArea" (Above grade/ground living area square feet), "OverallQual" (Rates the overall material and finish of the house), and "1stFlrSF" (First Floor square feet) are the most crucial features when it comes to predicting the sale price of a house.
+* "GrLivArea" (above grade/ground living area square feet), "OverallQual" (rates the overall material and finish of the house), and "1stFlrSF" (first floor square feet) are the most crucial features when it comes to predicting the sale price of a house.
 
 ## 9. Conclusion
 
-* Considering evaluation metric (R Square) and model interpretability, Lasso is the optimal model
+* Considering evaluation metric (R Square) and model interpretability, Lasso is the optimal model.
 * Ground living area square feet, overall quality and first floor square feet are the most critical prediction indicators.
 
 ## 10. Next Steps
