@@ -100,12 +100,12 @@ Overall Condition:
 
 * "GrLivArea" (above grade/ground living area square feet), "OverallQual" (rates the overall material and finish of the house), and "1stFlrSF" (first floor square feet) are the most crucial features when it comes to predicting the sale price of a house.
 
-## 9. Conclusion
+## 8. Conclusion
 
 * Considering evaluation metric (R Square) and model interpretability, Lasso is the optimal model.
 * Ground living area square feet, overall quality and first floor square feet are the most critical prediction indicators.
 
-## 10. Next Steps
+## 9. Next Steps
 
 * Experiment other feature combination.
 * Implement different models. 
